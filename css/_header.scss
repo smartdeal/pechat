@@ -1,0 +1,275 @@
+.header {
+    margin-bottom: 10px;
+    @include mn992 {
+        margin-bottom: 35px;
+    }
+    &__inner {
+        text-align: center;
+        position: relative;
+        padding: 10px 0;
+        @include mn992 {
+            padding: 0;
+            &::before {
+                content: '';
+                background: $color1 url(../img/logo-bg.jpg) center right no-repeat;
+                background-size: cover;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 70%;
+            }
+        }
+        @include mn1200 {
+            &::before {
+                right: calc(50% + 310px);
+            }
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-bottom: 45px;
+        @include mn768 {
+            padding-bottom: 0;
+        }
+        @include mn992 {
+            align-items: stretch;
+        }
+    }
+    &__logo {
+        width: 100px;
+        padding: 5px;
+        background: $color1;
+        @include mn768 {
+            width: auto;
+        }
+        @include mn992 {
+            width: 30%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: none;
+        }
+        @include mn1200 {
+            width: 23%;
+        }
+    }
+    &__logo-txt {
+        display: none;
+        padding-left: 23px;
+        position: relative;
+        color: white;
+        font-family: GothamPro;
+        font-size: 13px;
+        @include icon-bundle-wallet;
+        @include mn768 {
+            display: block;
+        }
+        @include mn992 {
+            margin-top: 10px;
+            text-align: left;
+        }
+    }
+    &__tagline,
+    &__call-btn {
+        display: none;
+        @include mn992 {
+            display: block;
+        }
+    }
+    &__tagline {
+        @include mn992 {
+            text-align: left;
+            margin-bottom: 17px;
+        }
+    }
+    &__center {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        @include mn768 {
+            position: static;
+            margin: 0 20px;
+            flex-shrink: 0;
+        }
+        @include mn992 {
+            flex-shrink: 2;
+            max-width: 550px;
+            margin: 0;
+            padding: 20px;
+        }
+    }
+    &__search {
+        max-width: 400px;
+        margin: 0 auto;
+        @include mn992 {
+            max-width: none;
+        }
+        &-form {
+            position: relative;
+        }
+        &-input {
+            color: #282828;
+            font-size: 15px;
+            font-family: GothamPro;
+            padding: 9px 110px 9px 10px;
+            text-overflow: ellipsis;
+            @include mn1200 {
+                padding: 13px 110px 13px 20px;
+            }
+        }
+        &-btn {
+            @include icon-bundle-search;
+            position: absolute !important;
+            right: 0;
+            top: -2px;
+            padding-left: 40px;
+            padding-right: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include mn1200 {
+                padding: 14px 20px 14px 50px;
+            }
+            &::after {
+                left: 15px;
+                @include mn1200 {
+                    left: 21px;
+                }
+            }
+        }
+    }
+    &__right {
+        font-family: 'Futura New';
+        @include mn768 {
+            margin: 0 20px;
+        }
+        @include mn992 {
+            width: 240px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 0;
+            padding-left: 20px;
+        }
+        @include mn1200 {
+            width: 260px;
+        }
+    }
+    &__email,
+    &__tel {
+        display: inline-block;
+        margin: 0 5px;
+        line-height: 1.2;
+        padding-left: 30px;
+        @include mn992 {
+            margin: 0;
+        }
+    }
+    &__tel {
+        @include icon-bundle-tel;
+        font-size: 18px;
+        font-weight: 700;
+        white-space: nowrap;
+        &:hover {
+            text-decoration: none;
+        }
+        @include mn550 {
+            font-size: 20px;
+        }
+        @include mn992 {
+            margin-top: 5px;
+        }
+        @include mn1200 {
+            font-size: 24px;
+        }
+    }
+    &__email {
+        @include icon-bundle-email-blue;
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: underline;
+        color: $color1;
+        &:hover {
+            color: $color1;
+            text-decoration: none;
+        }
+    }
+    &__clock {
+        @include icon-bundle-clock;
+        display: none;
+        color: #2b3338;
+        font-family: 'Futura New';
+        font-size: 15px;
+        font-weight: 300;
+        padding-left: 30px;
+        line-height: 1.4;
+        margin-top: 4px;
+        @include mn992 {
+            display: block;
+        }
+    }
+    &__call-btn {
+        @include icon-bundle-paper-plane;
+        width: auto;
+        margin: 5px 0 0;
+        padding-left: 30px;
+        font-weight: 300;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: $color1;
+        @include mn992 {}
+    }
+}
+
+.mmenu-btn {
+    width: 30px;
+    display: block;
+    text-decoration: none;
+    @include mn992 {
+        display: none;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    span {
+        display: block;
+        background: $color1;
+        height: 4px;
+        &+span {
+            margin-top: 4px;
+        }
+    }
+}
+
+#breadcrumbs {
+    color: $color1;
+    font-size: 14px;
+    background: #ecf0f3;
+    text-transform: uppercase;
+    padding: 10px 3%;
+    margin-bottom: 30px;
+    @include mn768 {
+        // padding: 20px 0;
+    }
+    a {
+        color: inherit;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .breadcrumb_last {
+        color: #01121c;
+    }
+}

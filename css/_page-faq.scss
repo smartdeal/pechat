@@ -1,0 +1,24 @@
+.b-accord_faq {
+    margin-bottom: 50px;
+    .b-accord__item {
+        padding: 20px 60px 20px 30px;
+    }
+    .b-accord__title {
+        &::after {
+            content: '';
+            width: 34px;
+            height: 18px;
+            position: absolute;
+            right: 14px;
+            top: 21px;
+            background: url() center no-repeat;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAASBAMAAADMExFcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEUoKzgoKzgoKzgoKzgoKzgoKzgoKzgoKzj///8FtM2oAAAAB3RSTlMALrkSE86676jGFAAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABjSURBVBjTVdCxCYBQDATQgH8CN9DGVhB7m0yg4iRf1zchxn8XuOZ4zUX6WfDKINNOjd6iFVG5DgsirZsQ6owIodUJoiCIPtJQkoZ+kqiRREACIQlExNFCxNFJix09/BVDY5IXJVUZIKYOKncAAAAASUVORK5CYII=');
+        }
+    }
+    .opened .b-accord__title {
+        color: $color1;
+        &::after {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAASBAMAAADMExFcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzr////HtJfVAAAACHRSTlMAErm4zs0TLugIDlUAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAaElEQVQY02NggABGZQEGVCDSEYgqwOjh0oqqSKQlzSMQVYkbQ0qLAIqSBAY2D0dUJQwoikBKGJAVQZQgK4IoQVIEU4JQBFMCV4RQAlOEUAJVhKwEokgExfEgRRpIbgcpamIoQg0ENnUAk/gX3YQKj+4AAAAASUVORK5CYII=');
+        }
+    }
+}

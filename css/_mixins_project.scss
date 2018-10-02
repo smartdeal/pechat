@@ -1,0 +1,583 @@
+@charset "UTF-8";
+// Usage: @include mixin_name {}
+@mixin content-width {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin t-title {
+    font-family: GothamPro;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    text-align: center;
+    @include mn768 {
+        font-size: 30px;
+    }
+    @include mn1200 {
+        text-align: left;
+    }
+}
+
+@mixin icons-bundle {
+    position: relative;
+    &::after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        background: url('../img/icons-bundle.png') center no-repeat;
+        background-position: 0px 0px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin icon-social-vk {
+    @include icons-bundle;
+    &::after {
+        width: 22px;
+        height: 13px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAANCAMAAACae25RAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAyVBMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////gQXHWAAAAQnRSTlMAVmYkXOH27o0GYVTfy7Rl6HQ7AdB6DrlS3tN9P1vSCfk2DOYK5Jh4YtTlyQMCxSX08Df87y6INF3qG19ptxfrpenvFXcjAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKpJREFUGNNVj9cSgkAMRa+ruIJiR0XsXbFh72X//6NMYH0gD/ckJ5mdWSSEEEkgZaSVzAAwLRJZ5JRSNk15okG6QFRFlBhlQES6UuXZQU0S6kCD4EZQTRPwuGmhTdlB1yX0+vTYYMj7kUM5xoRvpuCacTtfcNoc/jLUq7WKlYOoNtuYDnbaW3+zD/Nw1P6k9fkSLq437e9B9Dk8wvVTa7w8+y0/1IivktL/AROXKjUn4FiSAAAAAElFTkSuQmCC');
+    }
+}
+
+@mixin icon-bundle-email-blue {
+    @include icons-bundle;
+    &::after {
+        width: 19px;
+        height: 15px;
+    }
+}
+
+@mixin icon-bundle-email-red {
+    @include icons-bundle;
+    &::after {
+        width: 12px;
+        height: 9px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAMAAAAxZj1mAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAP1BMVEXfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzrfMzr///8CS5MnAAAAE3RSTlO9vuLhPurrsCqrrulUVVYsk+2R701UcwAAAAFiS0dEFJLfyTUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABESURBVAjXTY1LDoAwEEKptrXj9M/972qqGfWtIAQA+OKwfWaHD6ajx5Hk0ZJOUHNRUmtWrr603tvK77Ex56AZA+73cwF/mgbCajWKQQAAAABJRU5ErkJggg==');
+    }
+}
+
+@mixin icon-bundle-tel {
+    @include icons-bundle;
+    &::after {
+        width: 19px;
+        height: 19px;
+        background-position: -43px 0px;
+    }
+}
+
+@mixin icon-bundle-clock {
+    @include icons-bundle;
+    &::after {
+        width: 19px;
+        height: 19px;
+        background-position: -86px 0;
+    }
+}
+
+@mixin icon-bundle-paper-plane {
+    @include icons-bundle;
+    &::after {
+        width: 18px;
+        height: 18px;
+        background-position: -107px 0;
+    }
+}
+
+@mixin icon-bundle-search {
+    @include icons-bundle;
+    &::after {
+        width: 16px;
+        height: 16px;
+        background-position: -66px 0;
+    }
+}
+
+@mixin icon-bundle-wallet {
+    @include icons-bundle;
+    &::after {
+        width: 16px;
+        height: 16px;
+        background-position: -21px 0px;
+    }
+}
+
+@mixin icon-bundle-tel-white-25-25 {
+    @include icons-bundle;
+    &::after {
+        width: 25px;
+        height: 25px;
+        background-position: -68px 0px;
+    }
+}
+
+@mixin image-more-hover {
+    position: relative;
+    &::before {
+        opacity: 0;
+        transition: opacity .5s 0s;
+        background: rgba(223, 51, 58, 0.65) url() center no-repeat;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjAQMAAAAkFyEaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAYSURBVAjXY2BgOMAAArQl/wPBAyhJY7sADLAieW46CksAAAAASUVORK5CYII=');
+        position: absolute;
+        background-position: 50% 40%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        content: 'Подробнее';
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-top: 40%;
+    }
+}
+
+@mixin image-search-hover {
+    position: relative;
+    overflow: hidden;
+    &::after,
+    &::before {
+        opacity: 0;
+        transition: opacity .5s 0s;
+        content: '';
+        position: absolute;
+    }
+    &::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(223, 51, 58, 0.65);
+    }
+    &::after {
+        width: 25px;
+        height: 25px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABGlBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9y/ChlAAAAXXRSTlMAAUCR1PT96L14GznM+Y4MbfvWIGSjmLLt4za+MgZl8MHEmwMoXkQ30pkxnilCY/URhPgEh9+zIXYHSWYPGvaJoeI0+iYK0J9F03Qc3hRTzqIkc4WISw51aOts70a3sS1pAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQpJREFUKM91kGsjAlEQhs+yKElCtEKxoVxCSlFyyTW53y/z//+G98weu5P0fnpmnp0556xSOlZfvz0wOBQKD6vOREbIJDoak2IsTkHGJwIxyR07MTWd1OD4G2eiKFOzGufm0+CMZcwCikXXFFkH1ZLHy3rC9Vev4Mych3mYVXGdNdTrTDYOlxfdgCkwbRIlpNmC2WYqEuWl2YEpMZWJdqWpwFSZQkTpPWH0u/eZwqCaWJYjKtYZDxoYyvrmEB8eGS6Bj0/MhBbNU2POzlHFLy7rbqV2xT+39bvguk1/4qubVNBsdirr9s7rN+4fWgyP4oGFp+fqyyuoSwV5Y/XeU32oXqr9r1GfX873DwrcUacg76K5AAAAAElFTkSuQmCC');
+        top: 50%;
+        left: 50%;
+        margin-top: -12px;
+        margin-left: -12px;
+    }
+    &:hover {
+        &::before,
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin arrow-prev {
+    display: inline-block;
+    vertical-align: middle;
+    width: 21px;
+    height: 21px;
+    background: #e6e6e6 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAALBAMAAACufOGlAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUpKC4pKC4pKC4pKC4pKC4pKC4pKC7///9TjnZsAAAAB3RSTlMAR6vu7+F+JAhBCwAAAAFiS0dEBxZhiOsAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAoSURBVAjXY2BgEGJgYDRkYBAWYGB0ZGAQEWBgCGOA0CA+SBwszyAEACqmAfHEF9myAAAAAElFTkSuQmCC') center no-repeat;
+}
+
+@mixin arrow-next {
+    display: inline-block;
+    vertical-align: middle;
+    width: 21px;
+    height: 21px;
+    background: #e6e6e6 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAALBAMAAACufOGlAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUpKC4pKC4pKC4pKC4pKC4pKC4pKC7///9TjnZsAAAAB3RSTlMAq0fv7X7fRJoGjAAAAAFiS0dEBxZhiOsAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAkSURBVAjXYxBiYGBQVmBgYDICMlRADCcgIwxCA/kgcZA8UB0ANdACeULh6P8AAAAASUVORK5CYII=') center no-repeat;
+}
+
+@mixin link-blue {
+    color: $color1;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin icons-pay {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.hlp-vertical-middle {
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &::after {
+        content: '';
+        width: 0;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.icon-bank {
+    &::before {
+        content: '';
+        display: block;
+        width: 66px;
+        height: 66px;
+        background: url(../img/icons-bundle-pay.png) no-repeat;
+        background-position: 0 0;
+        position: relative;
+    }
+}
+
+.icon-notebook {
+    @extend .icon-bank;
+    &::before {
+        width: 65px;
+        height: 54px;
+        background-position: -66px 0;
+    }
+}
+
+.icon-cash {
+    @extend .icon-bank;
+    &::before {
+        width: 63px;
+        height: 68px;
+        background-position: -131px 0;
+    }
+}
+
+.icon-cell {
+    @extend .icon-bank;
+    &::before {
+        width: 68px;
+        height: 67px;
+        background-position: -194px 0;
+    }
+}
+
+.icon-build {
+    @extend .icon-bank;
+    &::before {
+        width: 67px;
+        height: 68px;
+        background-position: -262px 0;
+    }
+}
+
+.icon-document {
+    @extend .icon-bank;
+    &::before {
+        width: 58px;
+        height: 58px;
+        background-position: -329px 0;
+    }
+}
+
+.icon-small-pay {
+    &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 23px;
+        background: url(../img/icons-bundle.png) no-repeat;
+        background-position: 0 0;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+.icon-visa {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -451px -139px;
+    }
+}
+
+.icon-mastercard {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -450px -170px;
+    }
+}
+
+.icon-maestro {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -450px -199px;
+    }
+}
+
+.icon-ym {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -478px -143px;
+    }
+}
+
+.icon-webmoney {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -478px -177px;
+    }
+}
+
+.icon-beeline {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -398px -142px;
+    }
+}
+
+.icon-megafon {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -398px -174px;
+    }
+}
+
+.icon-mts {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -401px -202px;
+        width: 23px;
+    }
+}
+
+.icon-sber {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -422px -141px;
+    }
+}
+
+.icon-alfa {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -422px -171px;
+    }
+}
+
+.icon-masterpass {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -422px -198px;
+    }
+}
+
+.icon-promsv {
+    @extend .icon-small-pay;
+    &::before {
+        background-position: -421px -229px;
+    }
+}
+
+.icon-term-price {
+    @extend .icon-bank;
+    &::before {
+        background-image: url(../img/icons-bundle-terms.png);
+        width: 127px;
+        height: 146px;
+        background-position: 0 0;
+    }
+}
+
+.icon-term-tz {
+    @extend .icon-term-price;
+    &::before {
+        width: 136px;
+        height: 136px;
+        background-position: -127px 0;
+    }
+}
+
+.icon-term-maket {
+    @extend .icon-term-price;
+    &::before {
+        width: 135px;
+        height: 135px;
+        background-position: -265px 0;
+    }
+}
+
+.icon-term-pay {
+    @extend .icon-term-price;
+    &::before {
+        width: 129px;
+        height: 133px;
+        background-position: -400px 0;
+    }
+}
+
+.icon-term-time {
+    @extend .icon-term-price;
+    &::before {
+        width: 120px;
+        height: 120px;
+        background-position: -529px 0;
+    }
+}
+
+.icon-term-shipment {
+    @extend .icon-term-price;
+    &::before {
+        width: 119px;
+        height: 119px;
+        background-position: -649px 0;
+    }
+}
+
+.icon-term-delivery {
+    @extend .icon-term-price;
+    &::before {
+        width: 136px;
+        height: 105px;
+        background-position: -768px 0;
+    }
+}
+
+.icon-term-feedback {
+    @extend .icon-term-price;
+    &::before {
+        width: 118px;
+        height: 118px;
+        background-position: -904px 0;
+    }
+}
+
+.icon-term-handling {
+    @extend .icon-term-price;
+    &::before {
+        width: 103px;
+        height: 116px;
+        background-position: -1022px 0;
+    }
+}
+
+@mixin icon-menu-product {
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icons-bundle-menu.png) no-repeat;
+        background-position: 0px 0px;
+    }
+}
+
+.icon-menu-tshirt {
+    @include icon-menu-product;
+    &::before {
+        background-position: 0px 0px;
+    }
+}
+
+.icon-menu-polo {
+    @include icon-menu-product;
+    &::before {
+        background-position: -22px 0px;
+    }
+}
+
+.icon-menu-hoody {
+    @include icon-menu-product;
+    &::before {
+        background-position: -44px 0px;
+    }
+}
+
+.icon-menu-swish {
+    @include icon-menu-product;
+    &::before {
+        background-position: -66px 0px;
+    }
+}
+
+.icon-menu-vetr {
+    @include icon-menu-product;
+    &::before {
+        background-position: -88px 0px;
+    }
+}
+
+.icon-menu-sport {
+    @include icon-menu-product;
+    &::before {
+        background-position: -110px 0px;
+    }
+}
+
+.icon-menu-spec {
+    @include icon-menu-product;
+    &::before {
+        background-position: -132px 0px;
+    }
+}
+
+.icon-menu-fart {
+    @include icon-menu-product;
+    &::before {
+        background-position: -154px 0px;
+    }
+}
+
+.icon-menu-sign {
+    @include icon-menu-product;
+    &::before {
+        background-position: -176px 0px;
+    }
+}
+
+.icon-menu-hat {
+    @include icon-menu-product;
+    &::before {
+        background-position: 0px -22px;
+    }
+}
+
+.icon-menu-kaska {
+    @include icon-menu-product;
+    &::before {
+        background-position: -22px -22px;
+    }
+}
+
+.icon-menu-bag {
+    @include icon-menu-product;
+    &::before {
+        background-position: -44px -22px;
+    }
+}
+
+.icon-menu-cap {
+    @include icon-menu-product;
+    &::before {
+        background-position: -66px -22px;
+    }
+}
+
+.icon-menu-phone {
+    @include icon-menu-product;
+    &::before {
+        background-position: -88px -22px;
+    }
+}
+
+.icon-menu-puzzle {
+    @include icon-menu-product;
+    &::before {
+        background-position: -110px -22px;
+    }
+}
+
+.icon-menu-woman {
+    @include icon-menu-product;
+    &::before {
+        background-position: -132px -22px;
+    }
+}
+
+.icon-menu-stick {
+    @include icon-menu-product;
+    &::before {
+        background-position: -154px -22px;
+    }
+}

@@ -1,0 +1,66 @@
+.b-about-target {
+    &__body {
+        background: $color1 url(../img/icon-quote.png) no-repeat;
+        background-position: left 50px bottom 30px;
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+        border-radius: 10px;
+        padding: 25px;
+        line-height: 1.4;
+    }
+    &__sing {
+        text-align: right;
+        margin-top: 15px;
+    }
+}
+
+.b-bullet_about {
+    .b-bullet__item {
+        @include mn768 {
+            width: 33.33%;
+        }
+        .b-bullet__caption {
+            font-size: 20px;
+        }
+
+        .b-bullet__img {
+            background: url(../img/icons-bundle-about.png) 0 0 no-repeat;
+        }
+        &_1 {
+            .b-bullet__img {
+                width: 147px;
+                height: 147px;
+                background-position: 0px 0;
+            }
+        }
+        &_2 {
+            .b-bullet__img {
+                width: 134px;
+                height: 102px;
+                background-position: -150px 0;
+            }
+        }
+        &_3 {
+            .b-bullet__img {
+                width: 140px;
+                height: 106px;
+                background-position: -287px 0;
+            }
+        }
+    }
+}
+
+.content_about {
+    .content__body {
+        margin: 30px 0;
+    }
+}
+
+.b-about-cooperation__body {
+    font-size: 18px;
+}
+
+.b-our-production {
+    border-bottom: 2px solid #f2f2f2;
+}

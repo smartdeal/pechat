@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.b-accord_price {
+    .b-accord__title {
+        @include mn768 {
+            font-size: 20px;
+            padding: 25px 0;
+        }
+    }
+    .b-accord__item {
+        background: transparent !important;
+        border-bottom: 2px solid #f2f2f2;
+        .b-accord__title {
+        }
+        .btn-accordeon-more {
+            &::before {
+                content: 'Подробнее';
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 44px;
+                line-height: 44px;
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                overflow: hidden;
+                text-indent: -999em;
+                width: 48px;
+                padding: 0;
+                text-align: center;
+                @include mn768 {
+                    text-indent: 0;
+                    width: 80px;
+                    padding: 0 40px 0 20px;
+                }
+            }
+            &::after {
+                border-color: white;
+                width: 7px;
+                height: 7px;
+                top: 15px;
+                right: 20px;
+            }
+        }
+        &.opened .btn-accordeon-more {
+            &::before {
+                content: 'Скрыть';
+            }
+            &::after {
+                border-color: white;
+                top: 20px;
+            }
+        }
+    }
+}
+
+.content__body_price blockquote {
+    color: white;
+    background: $color1;
+}

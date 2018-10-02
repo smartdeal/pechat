@@ -1,0 +1,21 @@
+.wsp-pages-title,
+.wsp-posts-title {
+    @extend .title-line;
+}
+
+.wsp-container {
+    li {
+        font-size: 16px;
+        font-weight: 300;
+        color: $color1;
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    ul ul {
+        padding-left: 1em;
+    }
+}

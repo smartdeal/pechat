@@ -1,0 +1,84 @@
+.b-bullet_delivery {
+    .b-bullet {
+        &__img {
+            background-image: url(../img/icons-bundle-delivery.png);
+        }
+        &__item {
+            @include mn768 {
+                width: 33.33%;
+            }
+        }
+        &__item_1 .b-bullet__img {
+            width: 141px;
+            height: 130px;
+            background-position: 0 0;
+        }
+        &__item_2 .b-bullet__img {
+            width: 139px;
+            height: 125px;
+            background-position: -141px 0;
+        }
+        &__item_3 .b-bullet__img {
+            width: 150px;
+            height: 143px;
+            background-position: -280px 0;
+        }
+    }
+}
+
+.b-delivery-services {
+    margin: 50px 0;
+    &__items {
+        font-size: 0;
+    }
+    &__item {
+        padding: 20px 0;
+        @include mn768 {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        &:nth-child(3n+1),
+        &:nth-child(4n+1) {
+            background: #f2f2f2;
+        }
+    }
+    &__img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        padding: 0 5%;
+    }
+    &__desc {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.4;
+        font-size: 18px;
+        width: 50%;
+        overflow: hidden;
+    }
+    &__name {
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__tel {
+        font-size: 16px;
+        color: $color1;
+    }
+    &__link {
+        display: block;
+        color: $color1;
+        text-decoration: underline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.b-benefits {
+    margin: 50px 0;
+}
+
